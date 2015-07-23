@@ -1,0 +1,1834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="BLL">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>5a8d5a27-8f36-43fd-bd50-0cc16f72a7ec</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="ds">
+      <Fields>
+        <Field Name="projeto">
+          <DataField>projeto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="patrocinador">
+          <DataField>patrocinador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="coordenador">
+          <DataField>coordenador</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contrato">
+          <DataField>contrato</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="data">
+          <DataField>data</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="unidade">
+          <DataField>unidade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="depto">
+          <DataField>depto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="laboratorio">
+          <DataField>laboratorio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="requisitante">
+          <DataField>requisitante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cpf_requisistante">
+          <DataField>cpf_requisistante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="email_requisitante">
+          <DataField>email_requisitante</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="pac">
+          <DataField>pac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nac_inter">
+          <DataField>nac_inter</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ida_volta">
+          <DataField>ida_volta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="valor_total">
+          <DataField>valor_total</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="destino">
+          <DataField>destino</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="periodo_ida">
+          <DataField>periodo_ida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="periodo_volta">
+          <DataField>periodo_volta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nome_passageiro">
+          <DataField>nome_passageiro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cpf">
+          <DataField>cpf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="data_nascto">
+          <DataField>data_nascto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="passaporte">
+          <DataField>passaporte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="validade_passaporte">
+          <DataField>validade_passaporte</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="endereco">
+          <DataField>endereco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="email">
+          <DataField>email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="telefone">
+          <DataField>telefone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rg">
+          <DataField>rg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="familiar">
+          <DataField>familiar</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="data_ida">
+          <DataField>data_ida</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="data_volta">
+          <DataField>data_volta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tipocompra">
+          <DataField>tipocompra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="sigla_tipo_compra">
+          <DataField>sigla_tipo_compra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="texto_tipo_compra">
+          <DataField>texto_tipo_compra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>BLL</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>BLL</rd:DataSetName>
+        <rd:TableName>Rpassagem</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>GetAll</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[BLL.Rpassagem] GetAll(Int32)</rd:ObjectDataSourceSelectMethodSignature>
+        <rd:ObjectDataSourceType>BLL.Rpassagem, BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox101">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>DADOS DA PASSAGEM AÉREA</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox101</rd:DefaultName>
+        <Top>0.14111cm</Top>
+        <Left>0.20948cm</Left>
+        <Height>0.6cm</Height>
+        <Width>17.47246cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix3">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.07859in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>3.41691in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle3">
+                      <ReportItems>
+                        <Textbox Name="Textbox102">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>CLASSE ECONÔMICA</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox102</rd:DefaultName>
+                          <Top>0.25449cm</Top>
+                          <Left>0.07055cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>3.87985cm</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="nac_inter">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!nac_inter.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>nac_inter</rd:DefaultName>
+                          <Top>0.22804cm</Top>
+                          <Left>4.05624cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>3.26729cm</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="ida_volta">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ida_volta.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ida_volta</rd:DefaultName>
+                          <Top>0.22804cm</Top>
+                          <Left>7.34117cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>3.37313cm</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="destino">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Origem/Destino: </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!destino.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>destino</rd:DefaultName>
+                          <Top>1.05734cm</Top>
+                          <Left>0.04409cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>10.09277cm</Width>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="periodo_ida">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Período de ida: </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!periodo_ida.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>periodo_ida</rd:DefaultName>
+                          <Top>1.94613cm</Top>
+                          <Left>0.04409cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>5.24721cm</Width>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="ida_volta1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Período de volta: </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=First(Fields!periodo_volta.Value, "ds")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ida_volta1</rd:DefaultName>
+                          <Top>2.61669cm</Top>
+                          <Left>0.04409cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>6.45993cm</Width>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="valor_total">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Valor máximo: </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!valor_total.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>valor_total</rd:DefaultName>
+                          <Top>1.05734cm</Top>
+                          <Left>10.31325cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>7.01555cm</Width>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="data_ida">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>data de ida:</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!data_ida.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>data_ida</rd:DefaultName>
+                          <Top>1.94613cm</Top>
+                          <Left>6.68514cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>4.02916cm</Width>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="data_volta">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>data de volta:</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!data_volta.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>data_volta</rd:DefaultName>
+                          <Top>2.65196cm</Top>
+                          <Left>6.68514cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>4.38538cm</Width>
+                          <ZIndex>8</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Tablix Name="Tablix4">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>6.99673in</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>1.80627in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Rectangle Name="Rectangle4">
+                                        <ReportItems>
+                                          <Textbox Name="nome_passageiro">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Nome: </Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!nome_passageiro.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>nome_passageiro</rd:DefaultName>
+                                            <Top>0.27957cm</Top>
+                                            <Left>0.11718cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>9.11458cm</Width>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="rg">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>RG: </Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!rg.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>rg</rd:DefaultName>
+                                            <Top>0.27957cm</Top>
+                                            <Left>9.40815cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>4.14514cm</Width>
+                                            <ZIndex>1</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="cpf">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>CPF:</Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!cpf.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>cpf</rd:DefaultName>
+                                            <Top>0.27957cm</Top>
+                                            <Left>13.59739cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>3.81332cm</Width>
+                                            <ZIndex>2</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="data_nascto">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Data de Nascimento: </Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!data_nascto.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>data_nascto</rd:DefaultName>
+                                            <Top>1.02068cm</Top>
+                                            <Left>0.11718cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>6.0325cm</Width>
+                                            <ZIndex>3</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="passaporte">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Passaporte:</Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!passaporte.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>passaporte</rd:DefaultName>
+                                            <Top>1.02068cm</Top>
+                                            <Left>6.32607cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>5.38396cm</Width>
+                                            <ZIndex>4</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="validade_passaporte">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Validade: </Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!validade_passaporte.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>validade_passaporte</rd:DefaultName>
+                                            <Top>1.02068cm</Top>
+                                            <Left>11.82469cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>5.58603cm</Width>
+                                            <ZIndex>5</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="email">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>e-mail:</Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!email.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>email</rd:DefaultName>
+                                            <Top>1.64659cm</Top>
+                                            <Left>0.12855cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>11.62812cm</Width>
+                                            <ZIndex>6</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="familiar">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Familiar no Brasil:</Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!familiar.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>familiar</rd:DefaultName>
+                                            <Top>2.35242cm</Top>
+                                            <Left>0.0731cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>11.59284cm</Width>
+                                            <ZIndex>7</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="telefone">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Telefone: </Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!telefone.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>telefone</rd:DefaultName>
+                                            <Top>2.35242cm</Top>
+                                            <Left>11.73649cm</Left>
+                                            <Height>0.6cm</Height>
+                                            <Width>5.70069cm</Width>
+                                            <ZIndex>8</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                          <Textbox Name="endereco">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Endereço:</Value>
+                                                    <Style>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!endereco.Value</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>endereco</rd:DefaultName>
+                                            <Top>3.12881cm</Top>
+                                            <Left>0.09073cm</Left>
+                                            <Height>1.45911cm</Height>
+                                            <Width>17.31999cm</Width>
+                                            <ZIndex>9</ZIndex>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </ReportItems>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                        </Style>
+                                      </Rectangle>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <Group Name="Details" />
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <Top>4.09103cm</Top>
+                          <Left>0.09448cm</Left>
+                          <Height>4.58793cm</Height>
+                          <Width>17.77169cm</Width>
+                          <ZIndex>9</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Tablix>
+                        <Textbox Name="Textbox108">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>DADOS DO(S) PASSAGEIROS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox108</rd:DefaultName>
+                          <Top>3.49103cm</Top>
+                          <Left>0.05039cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>17.8158cm</Width>
+                          <ZIndex>10</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="ida_volta2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Ida e volta: </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=First(Fields!ida_volta.Value, "ds")</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ida_volta1</rd:DefaultName>
+                          <Top>1.9814cm</Top>
+                          <Left>10.9218cm</Left>
+                          <Height>0.6cm</Height>
+                          <Width>6.45993cm</Width>
+                          <ZIndex>11</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Group1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!destino.Value</GroupExpression>
+                  <GroupExpression>=Fields!nac_inter.Value</GroupExpression>
+                  <GroupExpression>=Fields!ida_volta.Value</GroupExpression>
+                  <GroupExpression>=Fields!valor_total.Value</GroupExpression>
+                  <GroupExpression>=Fields!periodo_ida.Value</GroupExpression>
+                  <GroupExpression>=Fields!periodo_volta.Value</GroupExpression>
+                  <GroupExpression>=Fields!data_ida.Value</GroupExpression>
+                  <GroupExpression>=Fields!data_volta.Value</GroupExpression>
+                </GroupExpressions>
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!destino.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>ds</DataSetName>
+        <Top>0.9175cm</Top>
+        <Left>0.23848cm</Left>
+        <Height>8.67895cm</Height>
+        <Width>17.97962cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>3.94274in</Height>
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>7.42828in</Width>
+  <Page>
+    <PageHeader>
+      <Height>7.43787cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image2">
+          <Source>Embedded</Source>
+          <Value>logo_relatorio</Value>
+          <Sizing>FitProportional</Sizing>
+          <Height>1.90465cm</Height>
+          <Width>4.55083cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Fields!sigla_tipo_compra.Value</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Fields!tipocompra.Value</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Left>10.42826cm</Left>
+          <Height>1.90465cm</Height>
+          <Width>4.98708cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox35">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Fundação de Apoio à Universidade de São Paulo</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Av. Afrânio Peixoto,14 - Butantã</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>05507-000 - São Paulo - SP - Brasil</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Telefones: 55 11 3035-0550 e 3091-4289</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Fax: 55 11 3035-0580 - CNPJ 68.314.830/0001-27</Value>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox35</rd:DefaultName>
+          <Left>4.55083cm</Left>
+          <Height>1.90465cm</Height>
+          <Width>5.87743cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="pac">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>PAC Nº</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!pac.Value, "ds")</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>pac</rd:DefaultName>
+          <Left>15.41534cm</Left>
+          <Height>1.90465cm</Height>
+          <Width>3.4525cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="projeto">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Projeto:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!projeto.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>projeto</rd:DefaultName>
+          <Top>1.93993cm</Top>
+          <Height>0.6cm</Height>
+          <Width>3.46639cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="patrocinador">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Patrocinador:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!patrocinador.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>patrocinador</rd:DefaultName>
+          <Top>1.90465cm</Top>
+          <Left>3.64278cm</Left>
+          <Height>0.6cm</Height>
+          <Width>14.27256cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="coordenador">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Coordenador: </Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!coordenador.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>coordenador</rd:DefaultName>
+          <Top>3.28429cm</Top>
+          <Height>0.6cm</Height>
+          <Width>11.92834cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="contrato">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Nº Convênio/ Contrato:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!contrato.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>contrato</rd:DefaultName>
+          <Top>2.57521cm</Top>
+          <Height>0.6cm</Height>
+          <Width>17.91534cm</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="data">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Data:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!data.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>data</rd:DefaultName>
+          <Top>3.28429cm</Top>
+          <Left>12.06945cm</Left>
+          <Height>0.6cm</Height>
+          <Width>5.84589cm</Width>
+          <ZIndex>8</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="unidade">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Unidade: </Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!unidade.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>unidade</rd:DefaultName>
+          <Top>4.0254cm</Top>
+          <Height>0.6cm</Height>
+          <Width>17.62021cm</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="depto">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Departamento: </Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!depto.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>depto</rd:DefaultName>
+          <Top>4.76651cm</Top>
+          <Height>0.6cm</Height>
+          <Width>17.6202cm</Width>
+          <ZIndex>10</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="laboratorio">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Laboratório: </Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!laboratorio.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>laboratorio</rd:DefaultName>
+          <Top>5.46529cm</Top>
+          <Height>0.6cm</Height>
+          <Width>17.6202cm</Width>
+          <ZIndex>11</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="requisitante">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Requisitante:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!requisitante.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>requisitante</rd:DefaultName>
+          <Top>6.17112cm</Top>
+          <Height>0.6cm</Height>
+          <Width>10.42826cm</Width>
+          <ZIndex>12</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="email_requisitante">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>e-mail:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value xml:space="preserve"> </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=First(Fields!email_requisitante.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>email_requisitante</rd:DefaultName>
+          <Top>6.17112cm</Top>
+          <Left>10.60465cm</Left>
+          <Height>0.6cm</Height>
+          <Width>7.01555cm</Width>
+          <ZIndex>13</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>Solid</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>2.84728cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Página:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>1.58981cm</Top>
+          <Left>0.20948cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.21534cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="ExecutionTime">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Data\Hora:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!ExecutionTime</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>ExecutionTime</rd:DefaultName>
+          <Top>1.55102cm</Top>
+          <Left>8.98068cm</Left>
+          <Height>0.66146cm</Height>
+          <Width>8.21026cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>OBSERVAÇÃO: Alterações que resultem em multas serão de responsabilidade do requisitante.</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.85753cm</Top>
+          <Left>0.23848cm</Left>
+          <Height>0.59119cm</Height>
+          <Width>17.91534cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="texto_tipo_compra">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!texto_tipo_compra.Value, "ds")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>texto_tipo_compra</rd:DefaultName>
+          <Top>0.14111cm</Top>
+          <Left>0.20948cm</Left>
+          <Height>0.6cm</Height>
+          <Width>17.97962cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>Solid</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>1cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo_relatorio">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>pt-BR</Language>
+  <rd:ReportID>49afac6a-9104-463d-ac56-1b0e358e8348</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

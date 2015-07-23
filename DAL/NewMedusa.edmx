@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MedusaModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MedusaModel1StoreContainer">
+          <EntitySet Name="vContratosPessoa" EntityType="MedusaModel1.Store.vContratosPessoa" store:Type="Views" store:Schema="dbo" store:Name="vContratosPessoa">
+            <DefiningQuery>SELECT 
+      [vContratosPessoa].[id_contrato] AS [id_contrato], 
+      [vContratosPessoa].[cpf] AS [cpf], 
+      [vContratosPessoa].[nome] AS [nome], 
+      [vContratosPessoa].[rg] AS [rg], 
+      [vContratosPessoa].[tipo] AS [tipo], 
+      [vContratosPessoa].[descricao] AS [descricao], 
+      [vContratosPessoa].[projeto] AS [projeto], 
+      [vContratosPessoa].[valor] AS [valor], 
+      [vContratosPessoa].[inicio] AS [inicio], 
+      [vContratosPessoa].[termino] AS [termino], 
+      [vContratosPessoa].[obs] AS [obs]
+      FROM [dbo].[vContratosPessoa] AS [vContratosPessoa]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Medusa.dbo.vContratosPessoa' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vContratosPessoa">
+          <Key>
+            <PropertyRef Name="id_contrato" />
+          </Key>
+          <Property Name="id_contrato" Type="bigint" Nullable="false" />
+          <Property Name="cpf" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="nome" Type="varchar" MaxLength="60" />
+          <Property Name="rg" Type="varchar" MaxLength="20" />
+          <Property Name="tipo" Type="varchar" Nullable="false" MaxLength="18" />
+          <Property Name="descricao" Type="varchar(max)" />
+          <Property Name="projeto" Type="int" />
+          <Property Name="valor" Type="decimal" Scale="2" />
+          <Property Name="inicio" Type="datetime" />
+          <Property Name="termino" Type="datetime" />
+          <Property Name="obs" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MedusaModel1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="NewMedusaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vContratosPessoa" EntityType="MedusaModel1.vContratosPessoa" />
+        </EntityContainer>
+        <EntityType Name="vContratosPessoa">
+          <Key>
+            <PropertyRef Name="id_contrato" />
+          </Key>
+          <Property Name="id_contrato" Type="Int64" Nullable="false" />
+          <Property Name="cpf" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+          <Property Name="nome" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="rg" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="tipo" Type="String" Nullable="false" MaxLength="18" Unicode="false" FixedLength="false" />
+          <Property Name="descricao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="projeto" Type="Int32" />
+          <Property Name="valor" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="inicio" Type="DateTime" />
+          <Property Name="termino" Type="DateTime" />
+          <Property Name="obs" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MedusaModel1StoreContainer" CdmEntityContainer="NewMedusaEntities">
+          <EntitySetMapping Name="vContratosPessoa"><EntityTypeMapping TypeName="MedusaModel1.vContratosPessoa"><MappingFragment StoreEntitySet="vContratosPessoa">
+            <ScalarProperty Name="id_contrato" ColumnName="id_contrato" />
+            <ScalarProperty Name="cpf" ColumnName="cpf" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+            <ScalarProperty Name="rg" ColumnName="rg" />
+            <ScalarProperty Name="tipo" ColumnName="tipo" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+            <ScalarProperty Name="projeto" ColumnName="projeto" />
+            <ScalarProperty Name="valor" ColumnName="valor" />
+            <ScalarProperty Name="inicio" ColumnName="inicio" />
+            <ScalarProperty Name="termino" ColumnName="termino" />
+            <ScalarProperty Name="obs" ColumnName="obs" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="NewMedusa">
+        <EntityTypeShape EntityType="MedusaModel1.vContratosPessoa" Width="1.5" PointX="0.75" PointY="0.75" Height="3.1340950520833335" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

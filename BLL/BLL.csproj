@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33D451FF-C8B1-41AD-B064-7742A13FA308}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.0.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\MySQL\MySQL Connector Net 6.0.7\Assemblies\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BolsaBLL.cs" />
+    <Compile Include="BolsaVigenciaBLL.cs" />
+    <Compile Include="BolsistaBLL.cs" />
+    <Compile Include="CepBLL.cs" />
+    <Compile Include="CNPJ.cs" />
+    <Compile Include="ContratoBolsaBLL.cs" />
+    <Compile Include="ContratosParcelaBLL.cs" />
+    <Compile Include="CoordenadorBLL.cs" />
+    <Compile Include="CPF.cs" />
+    <Compile Include="GrupoBLL.cs" />
+    <Compile Include="InterfaceBLL.cs" />
+    <Compile Include="MenuBLL.cs" />
+    <Compile Include="MoedaBLL.cs" />
+    <Compile Include="PACBLL.cs" />
+    <Compile Include="PACDestinoBLL.cs" />
+    <Compile Include="PACModalidadeCompraBLL.cs" />
+    <Compile Include="PacPassageiroBLL.cs" />
+    <Compile Include="PACStatusBLL.cs" />
+    <Compile Include="PACTipoAquisicaoBLL.cs" />
+    <Compile Include="PAC_CotacaoBLL.cs" />
+    <Compile Include="PAC_PACDestinoBLL.cs" />
+    <Compile Include="PAC_PACStatusBLL.cs" />
+    <Compile Include="PaisBLL.cs" />
+    <Compile Include="ProjetoBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatorioTotaisContratos.cs" />
+    <Compile Include="Rpassagem.cs" />
+    <Compile Include="SecurityBLL.cs" />
+    <Compile Include="SendEmail.cs" />
+    <Compile Include="TipoDocumentoBLL.cs" />
+    <Compile Include="Upload.cs" />
+    <Compile Include="UsuarioBLL.cs" />
+    <Compile Include="VPagtosBolsistasBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{AFD247A6-47EB-42A3-B369-58A75E412AE9}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Browsers\firefox.browser" />
+    <None Include="App_Browsers\ie.browser" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
