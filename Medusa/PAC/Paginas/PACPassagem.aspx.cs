@@ -16,19 +16,6 @@ namespace Medusa.PAC.Paginas
         {
             if (!IsPostBack)
             {
-
-
-
-
-
-
-                //teste
-
-
-
-
-
-
                 base.Page_Load(sender, e);
                 ViewState["SortExpression"] = "id_pac";
                 ViewState["SortDirection"] = "DESC";
